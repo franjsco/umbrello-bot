@@ -1,0 +1,35 @@
+{
+  "name": "umbrello-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/server.js",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frsposito/umbrello-bot.git"
+  },
+  "author": "frsposito",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/frsposito/umbrello-bot/issues"
+  },
+  "homepage": "https://github.com/frsposito/umbrello-bot#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "eslint": "^6.1.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.0.0",
+    "winston": "^3.2.1"
+  }
+}
