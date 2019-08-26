@@ -6,8 +6,20 @@ export const searchCityTemplate = (data) => (
 );
 
 
-export const welcomeTemplate = (name) => (
-  `Welcome *${name}*`
+export const welcomeTemplate = () => (
+  `*Welcome to umbrello-bot* ☂ ️
+
+An opensource telegram bot to know if you need to take the umbrella.
+
+Made with ❤️ by @frsposito.
+  `
+);
+
+export const helpTemplate = () => (
+  `*umbrello-bot commands*:
+/search {city name} - search city.
+/set {city id} - set city id.
+/get - get forecast.`
 );
 
 
