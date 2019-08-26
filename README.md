@@ -14,7 +14,8 @@ An opensource telegram bot to know if you need to take the umbrella.
 ## Usage
 
 
-**umbrello-bot** 
+**umbrello-bot** uses the [umbrello-api](https://github.com/frsposito/umbrello-api) to get weather information.
+
 
 ### 1. Search the city.
 Search the city id with:
@@ -49,12 +50,13 @@ Get the forecasts with:
 ### Step by step.
 
 1. Install Node.js and npm.
-2. Clone this repository.
-3. Install dependencies with `npm install`.
-4. Create a new bot with BotFather on Telegram
-5. Create env file or set environment variables (read: "Environment variables")
-6. Build the codewith `npm run build`.
-7. Launch the bot with `npm run serve`.
+2. Configure [umbrello-api](https://github.com/frsposito/umbrello-api).
+3. Clone this repository.
+4. Install dependencies with `npm install`.
+5. Create a new bot with BotFather on Telegram
+6. Create env file or set environment variables (read: "Environment variables")
+7. Build the code with `npm run build`.
+8. Launch the bot with `npm run serve`.
 
 
 #### Environment Variables.
