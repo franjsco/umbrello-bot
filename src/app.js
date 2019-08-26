@@ -7,22 +7,24 @@ import { initUser, setCity, findAssociedCity } from './db';
 import {
   searchCityTemplate,
   welcomeTemplate,
+  helpTemplate,
   errorTemplate,
   setLocationTemplate,
   weatherTemplate,
   weatherDetailsTemplate,
 } from './templates';
 
-const bot = new Telegraf(config.telegram.token);
+const bot = new Telegraf(config.telegraf.token);
 
 bot.start((ctx) => {
-  const { id, first_name } = ctx.from;
+  const { id } = ctx.from;
   initUser(id)
-    .then(() => ctx.reply(welcomeTemplate(first_name), { parse_mode: 'Markdown' }))
-    .catch(() => ctx.reply(errorTemplate, { parse_mode: 'Markdown' }));
+    .then(() => ctx.reply(welcomeTemplate(), config.telegraf.options.message))
+    .then(() => ctx.reply(helpTemplate(), config.telegraf.options.message))
+    .catch(() => ctx.reply(errorTemplate(), config.telegraf.options.message));
 });
 
-bot.help((ctx) => ctx.reply('help'));
+bot.help((ctx) => ctx.reply(helpTemplate()));
 
 
 bot.command('/search', (ctx) => {
@@ -37,10 +39,10 @@ bot.command('/search', (ctx) => {
   searchCity(cityName)
     .then((data) => {
       data.forEach((e) => {
-        ctx.reply(searchCityTemplate(e), { parse_mode: 'Markdown' });
+        ctx.reply(searchCityTemplate(e), config.telegraf.options.message);
       });
     })
-    .catch(() => ctx.reply(errorTemplate, { parse_mode: 'Markdown' }));
+    .catch(() => ctx.reply(errorTemplate(), config.telegraf.options.message));
 });
 
 
@@ -57,7 +59,7 @@ bot.command('/set', (ctx) => {
 
   setCity(id, cityId)
     .then(() => ctx.reply(setLocationTemplate(cityId)))
-    .catch(() => ctx.reply(errorTemplate, { parse_mode: 'Markdown' }));
+    .catch(() => ctx.reply(errorTemplate(), config.telegraf.options.message));
 });
 
 
@@ -68,14 +70,15 @@ bot.command('/get', (ctx) => {
     .then((cityId) => rainCheck(cityId))
     .then((json) => {
       if (json.rain === 'Y') {
-        ctx.reply(weatherTemplate(), { parse_mode: 'Markdown' });
+        ctx.reply(weatherTemplate(), config.telegraf.options.message);
       }
+
       return json;
     })
     .then((json) => {
-      ctx.reply(weatherDetailsTemplate(json), { parse_mode: 'Markdown' });
+      ctx.reply(weatherDetailsTemplate(json), config.telegraf.options.message);
     })
-    .catch((error) => ctx.reply(error));
+    .catch(() => ctx.reply(errorTemplate(), config.telegraf.options.message));
 });
 
 

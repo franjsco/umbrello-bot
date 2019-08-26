@@ -1,8 +1,13 @@
 require('dotenv').config();
 
 
-const telegram = {
+const telegraf = {
   token: process.env.TELEGRAM_TOKEN,
+  options: {
+    message: {
+      parse_mode: 'Markdown',
+    },
+  },
 };
 
 const umbrello = {
@@ -15,8 +20,9 @@ const database = {
   password: process.env.DB_PASSWORD,
 };
 
+
 const config = {
-  telegram,
+  telegraf,
   umbrello,
   database,
 };
