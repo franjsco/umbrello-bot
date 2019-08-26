@@ -16,7 +16,7 @@ An opensource telegram bot to know if you need to take the umbrella.
 
 **umbrello-bot** 
 
-### 1. Search city
+### 1. Search the city.
 Search the city id with:
 
 ```
@@ -28,7 +28,7 @@ Search the city id with:
 It will send back the cities id.
 
 
-### 2. Set the city
+### 2. Set the city.
 Set the city  wth:
 
 ```
@@ -38,7 +38,7 @@ Set the city  wth:
 *example: `/set 3169070`. (3169070= Rome, IT)*
 
 
-### 3. Get the forecasts
+### 3. Get the forecasts.
 Get the forecasts with:
 ```
 /get
@@ -46,7 +46,7 @@ Get the forecasts with:
 
 
 ## Installation
-### Step by step
+### Step by step.
 
 1. Install Node.js and npm.
 2. Clone this repository.
@@ -57,7 +57,7 @@ Get the forecasts with:
 7. Launch the bot with `npm run serve`.
 
 
-#### Environment Variables 
+#### Environment Variables.
 ```
 NODE_ENV=production
 TELEGRAM_TOKEN=token-here
