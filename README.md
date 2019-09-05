@@ -75,8 +75,8 @@ DB_PASSWORD=pass
 ## Build Docker image
 ```
 # cd umbrello-bot/
-# docker build -t umbrello-bot:1.0 .
-# docker run umbrello-bot:1.0
+# docker build -t umbrello-bot .
+# docker run umbrello-bot
 ```
 
 ## License
