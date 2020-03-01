@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frsposito/umbrello-bot.git"
+    "url": "git+https://github.com/franjsco/umbrello-bot.git"
   },
-  "author": "frsposito",
+  "author": "franjsco",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/frsposito/umbrello-bot/issues"
+    "url": "https://github.com/franjsco/umbrello-bot/issues"
   },
-  "homepage": "https://github.com/frsposito/umbrello-bot#readme",
+  "homepage": "https://github.com/franjsco/umbrello-bot#readme",
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",

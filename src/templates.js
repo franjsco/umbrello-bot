@@ -11,7 +11,7 @@ export const welcomeTemplate = () => (
 
 An opensource telegram bot to know if you need to take the umbrella.
 
-Made with ❤️ by @frsposito.
+Made with ❤️ by @franjsco.
   `
 );
 
