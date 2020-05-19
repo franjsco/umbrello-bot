@@ -37,10 +37,6 @@ DB_PASSWORD=pass
 
 ## Usage
 
-```sh
-npm run start
-```
-
 
 #### 1. Search the city.
 Search the city id with:
