@@ -1,23 +1,48 @@
-# umbrello-bot
-An opensource telegram bot to know if you need to take the umbrella.
+<h1 align="center">Welcome to umbrello-bot ☂️</h1>
+<p>
+  <a href="https://github.com/franjsco/umbrello-bot/blob/master/LICENSE" target="_blank">
+    <img alt="License: GPL--3.0--or--later" src="https://img.shields.io/github/license/franjsco/umbrello-bot" />
+  </a>
+  <a href="https://twitter.com/franjsco" target="_blank">
+    <img alt="Twitter: franjsco" src="https://img.shields.io/twitter/follow/franjsco.svg?style=social" />
+  </a>
+</p>
 
-<img src="assets/screenshot.png" height="400">
+> A telegram bot to know if you need to take the umbrella.
 
+<img src="screenshot.jpg">
 
-**Technologies**:
+## Install
 
-- Node.js
-- Telegraf.js
+1. Install Node.js and npm.
+2. Install MongoDB.
+3. Configure [umbrello-api](https://github.com/franjsco/umbrello-api).
+4. Clone this repository.
+5. Install dependencies with `npm install`.
+6. Create a new bot with **@BotFather** on Telegram
+7. Create env file or set environment variables (read: "Environment variables")
+8. Build the code with `npm run build`.
+9. Launch the bot with `npm run serve`.
 
+#### Environment Variables.
+```sh
+NODE_ENV=production
+TELEGRAM_TOKEN=token-here
+UMBRELLO_API_URL=url-here
 
+DB_HOST=mongodb://host:port/db
+DB_USER=user
+DB_PASSWORD=pass
+```
 
 ## Usage
 
+```sh
+npm run start
+```
 
-**umbrello-bot** uses the [umbrello-api](https://github.com/franjsco/umbrello-api) to get weather information.
 
-
-### 1. Search the city.
+#### 1. Search the city.
 Search the city id with:
 
 ```
@@ -29,7 +54,7 @@ Search the city id with:
 It will send back the cities id.
 
 
-### 2. Set the city.
+#### 2. Set the city.
 Set the city  wth:
 
 ```
@@ -39,38 +64,11 @@ Set the city  wth:
 *example: `/set 3169070`. (3169070= Rome, IT)*
 
 
-### 3. Get the forecasts.
+#### 3. Get the forecasts.
 Get the forecasts with:
 ```
 /get
 ```
-
-
-## Installation
-### Step by step.
-
-1. Install Node.js and npm.
-2. Configure [umbrello-api](https://github.com/franjsco/umbrello-api).
-3. Clone this repository.
-4. Install dependencies with `npm install`.
-5. Create a new bot with BotFather on Telegram
-6. Create env file or set environment variables (read: "Environment variables")
-7. Build the code with `npm run build`.
-8. Launch the bot with `npm run serve`.
-
-
-#### Environment Variables.
-```
-NODE_ENV=production
-TELEGRAM_TOKEN=token-here
-UMBRELLO_API_URL=url-here
-
-DB_HOST=mongodb://host:port/db
-DB_USER=user
-DB_PASSWORD=pass
-```
-
-
 
 ## Build Docker image
 ```
@@ -79,8 +77,22 @@ DB_PASSWORD=pass
 # docker run umbrello-bot
 ```
 
-## License
-GPLv3
+## Author
 
----
-Made with ❤️ by Francesco Esposito ([@franjsco](https://github.com/franjsco))
+👤 **franjsco (Francesco Esposito)**
+
+* Website: https://franjsco.github.io/
+* Twitter: [@franjsco](https://twitter.com/franjsco)
+* Github: [@franjsco](https://github.com/franjsco)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2020 [franjsco (Francesco Esposito)](https://github.com/franjsco).<br />
+This project is [GPL--3.0--or--later](https://github.com/franjsco/umbrello-bot/blob/master/LICENSE) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
